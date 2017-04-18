@@ -18,7 +18,9 @@ parts:
     stage-packages:
       - openssh-client
       - sshpass
+      - pwgen
       - adduser
+      - passwd
   scripts:
     plugin: dump
     source: .
