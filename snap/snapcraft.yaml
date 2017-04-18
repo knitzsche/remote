@@ -11,6 +11,9 @@ apps:
   run-over-ssh:
     command: bin/run-over-ssh.sh
     plugs: [network, account-control]
+  existing-user:
+    command: bin/run-existing-user-over-ssh.sh
+    plugs: [network, account-control]
 
 parts:
   ssh:
