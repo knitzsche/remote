@@ -1,0 +1,26 @@
+name: remote
+version: '0.1'
+summary: remote-test 
+description: |
+  nothing yet
+
+grade: devel
+confinement: strict
+
+apps:
+  run-over-ssh:
+    command: bin/run-over-ssh.sh
+    plugs: [network, account-control]
+
+parts:
+  ssh:
+    plugin: nil
+    stage-packages:
+      - openssh-client
+      - sshpass
+      - adduser
+  scripts:
+    plugin: dump
+    source: .
+    stage:
+      - bin 
