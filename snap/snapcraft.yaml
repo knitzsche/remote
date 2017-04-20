@@ -29,3 +29,11 @@ parts:
     source: .
     stage:
       - bin 
+  ssh-assets:
+    plugin: dump
+    stage:
+      - config
+  #known:
+  #  plugin: dump
+  #  source: .ssh
+  #    - known_hosts 
